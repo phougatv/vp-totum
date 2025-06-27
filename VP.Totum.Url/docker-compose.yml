@@ -1,4 +1,19 @@
 services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: totum_web
+    environment:
+      - ConnectionStrings__TotumDb=Host=db;Port=5432;Database=totum_db;Username=totum_user;Password=totum_user
+
+    restart: always
+    ports:
+      - "5000:8080"
+    # networks:
+    #   - totum_net
+    depends_on:
+      - db
   db:
     image: postgres:16
     container_name: totum_postgres
@@ -9,6 +24,8 @@ services:
       POSTGRES_DB: totum_db
     ports:
       - "5432:5432"
+    # networks:
+    #   - totum_net
     volumes:
       - totum_pgdata:/var/lib/postgresql/data
 

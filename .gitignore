@@ -417,6 +417,7 @@ FodyWeavers.xsd
 *.msp
 
 # vp-totum files
+.git/
 .gitignore/
 bin/
 obj/

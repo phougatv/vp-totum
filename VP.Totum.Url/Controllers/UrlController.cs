@@ -15,11 +15,11 @@ public class UrlController(TotumDbContext dbContext) : ControllerBase
 		try
 		{
 			var shortCode = (ShortCode)code;
-			var shortenedUrl = await GetByShortCodeAsync(code);
+			var shortenedUrl = await GetByShortCodeAsync(shortCode);
 			if (shortenedUrl == null)
 				return NotFound("Url not available anymore");
 
-			return RedirectPreserveMethod(shortenedUrl.OriginalUrl);
+			return Ok(shortenedUrl.OriginalUrl);
 		}
 		catch (ArgumentException ex)
 		{
