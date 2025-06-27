@@ -1,0 +1,6 @@
+@VP.Totum.Url_HostAddress = http://localhost:5246
+
+GET {{VP.Totum.Url_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
