@@ -3,7 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VP.Totum.Url", "VP.Totum.Url\VP.Totum.Url.csproj", "{A8034320-70F5-46EB-AC82-A4DA90E917AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VP.Totum.Url", "VP.Totum.Url\VP.Totum.Url.csproj", "{A8034320-70F5-46EB-AC82-A4DA90E917AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{C2C63FBB-28F7-48EF-8BDA-802CA4DDB85E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{CF2CCF09-61E5-4D47-ACA2-4410AB45CB1D}"
+	ProjectSection(SolutionItems) = preProject
+		github-actions.yml = github-actions.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +25,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF2CCF09-61E5-4D47-ACA2-4410AB45CB1D} = {C2C63FBB-28F7-48EF-8BDA-802CA4DDB85E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A28DF15-6772-4056-8A6D-09406C06985F}

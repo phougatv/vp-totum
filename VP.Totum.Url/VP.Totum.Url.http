@@ -1,6 +1,11 @@
 @VP.Totum.Url_HostAddress = http://localhost:5246
 
-GET {{VP.Totum.Url_HostAddress}}/weatherforecast/
-Accept: application/json
+### Shorten a URL (POST)
+POST {{VP.Totum.Url_HostAddress}}/Url/shorten
+Content-Type: application/json
 
-###
+"https://www.example.com"
+
+### Get original URL by code (GET)
+GET {{VP.Totum.Url_HostAddress}}/Url/{jwPSkJ}
+Accept: application/json
