@@ -2,7 +2,8 @@ name: Build, Test, and Deploy TOTUM to Azure Container App
 
 on:
   push:
-    branches: [main]
+    branches: [master]
+  workflow_dispatch:
 
 env:
   AZURE_CONTAINER_REGISTRY: totum-bgcxfhgaa4e4cghw.azurecr.io
@@ -39,7 +40,7 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: Build Docker image
       run: |
-        docker build -t ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:latest .
+        docker build -t ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:latest VP.Totum.Url
 
     - name: Push Docker image to Azure Container Registry
       run: |
