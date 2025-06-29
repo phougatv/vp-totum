@@ -9,7 +9,7 @@ env:
   AZURE_CONTAINER_REGISTRY_NAME: totum-bgcxfhgaa4e4cghw
   AZURE_CONTAINER_REGISTRY: totum-bgcxfhgaa4e4cghw.azurecr.io
   IMAGE_NAME: totum-api
-  CONTAINER_APP_NAME: totum-api
+  CONTAINER_APP_NAME: totum-container
   RESOURCE_GROUP: my-rg
   CONTAINER_PORT: 8080
 
