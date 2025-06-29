@@ -44,7 +44,7 @@ jobs:
         docker build -t ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:latest VP.Totum.Url
 
     - name: Login to ACR
-      run: az acr login --name ${{ env.AZURE_CONTAINER_REGISTRY_NAME }}
+      run: docker login ${{ env.AZURE_CONTAINER_REGISTRY_NAME }} --username ${{ secrets.AZURE_CLIENT_ID }} --password ${{ secrets.AZURE_CLIENT_SECRET }}
 
     - name: Push Docker image to Azure Container Registry
       run: |
