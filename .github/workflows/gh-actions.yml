@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 env:
+  AZURE_CONTAINER_REGISTRY_NAME: totum-bgcxfhgaa4e4cghw
   AZURE_CONTAINER_REGISTRY: totum-bgcxfhgaa4e4cghw.azurecr.io
   IMAGE_NAME: totum-api
   CONTAINER_APP_NAME: totum-api
@@ -41,6 +42,9 @@ jobs:
     - name: Build Docker image
       run: |
         docker build -t ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:latest VP.Totum.Url
+
+    - name: Login to ACR
+      run: az acr login --name ${{ env.AZURE_CONTAINER_REGISTRY_NAME }}
 
     - name: Push Docker image to Azure Container Registry
       run: |
