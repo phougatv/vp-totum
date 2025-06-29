@@ -61,9 +61,9 @@ jobs:
             --name ${{ env.CONTAINER_APP_NAME }} \
             --resource-group ${{ env.RESOURCE_GROUP }} \
             --image ${{ env.AZURE_CONTAINER_REGISTRY }}/${{ env.IMAGE_NAME }}:latest \
-            --cpu 0.5 \
-            --memory 1.0Gi \
-            --min-replicas 1 \
-            --max-replicas 1 \
-            --ingress external \
-            --target-port ${{ env.CONTAINER_PORT }}
+          # --cpu 0.5 \
+          # --memory 1.0Gi \
+          # --min-replicas 1 \
+          # --max-replicas 1 \
+          # --ingress external \
+          # --target-port ${{ env.CONTAINER_PORT }}
